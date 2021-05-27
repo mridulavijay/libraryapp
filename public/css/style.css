@@ -1,0 +1,31 @@
+
+  .form{
+     margin-top:200px;
+     margin-bottom:170px;
+     margin-right: 30%;
+     margin-left: 30%;
+     padding-left: 100px;
+     padding-bottom: 60px;
+     padding-top: 30px;
+     
+     color:darkblue;
+    }
+    .btn{
+        background-color:darkblue;
+    }
+    .form a{
+      color:darkblue;
+    }
+    .form2{
+      margin-top:200px;
+      margin-bottom:170px;
+      margin-right: 30%;
+     margin-left: 30%;
+     padding-left: 100px;
+     padding-bottom: 60px;
+     padding-top: 30px;
+      color:white;
+    }
+   .form3{
+    padding-left: 50px;
+   }

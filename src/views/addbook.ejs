@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	</head>
+	<body style="background-image: url(/images/abi.jpg);background-attachment: fixed;background-size: cover">
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        
+          <%for(i=0;i<nav.length;i++){%>
+          <li>
+          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+        </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul> 
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1> Add Book
+          <p class="lead"></p>
+        </h1>
+      </div>
+    </div>
+  </div>
+ </div> 
+
+      
+       
+ <div class="container">    
+            
+    <div   class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading" style="background-color:darkblue;">
+                <div class="panel-title" style="color: white;">Book Details</div>
+                
+            </div>  
+
+            <div class="panel-body" >
+                <form class="form3" onsubmit="return vald()">
+                    <div class="row mb-3">
+                        <div class="col-sm-10">
+                          <label for="title" class="col-sm-4 col-form-label">Book Title</label>
+                          <input type="title"  class="form-control" id="btitle" oninput="return tit_val()" required >
+                          <label for="error" id="errorb"></label>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-sm-10">
+                          <label for="author" class="col-sm-2 col-form-label">Author</label>
+                          <input type="author"  class="form-control" id="bauthor" oninput="return aut_val()"required>
+                          <label for="error" id="errora"></label>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-sm-10">
+                          <label for="genre" class="col-sm-2 col-form-label">Genre</label>
+                          <input type="text"  class="form-control" id="bgenre" oninput="return gen_val()"required >
+                          <label for="error" id="errorg"></label>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-sm-8">
+                          <label for="exampleInputFile">Image File input</label>
+                          <input type="file" id="exampleInputFile" id="imgb"required>
+                          </div>
+                      </div>    
+                      <br>
+                      <div class="row mb-3">
+                        <div class="col-sm-10">
+                          <label for="textarea"> Book Description</label>
+                          <textarea class="form-control" rows="4" id="bdesc" oninput="return desc_val()"></textarea>
+                          <label for="error" id="errorbd"></label>
+                          </div>
+                      </div>  
+                      <br>
+                      <div style="text-align:justify;">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+             </div>
+       </div>
+    </div>
+</div>
+            
+     
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+    <script src="js/book_val.js"></script>
+	</body>
+</html>
